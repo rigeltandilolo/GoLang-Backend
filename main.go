@@ -99,7 +99,7 @@ func main() {
 	r.HandleFunc("/api/notes", getAllNotes).Methods("GET")
 	r.HandleFunc("/api/notes/{id}", getNoteByID).Methods("GET")
 	r.HandleFunc("/api/notes/add", addNote).Methods("POST")
-	r.HandleFunc("/api/notes/{id}", updateNote).Methods("PUT")
+	r.HandleFunc("/api/notes/update/{id}", updateNote).Methods("PUT")
 	r.HandleFunc("/api/notes/{id}", deleteNote).Methods("DELETE")
 
 	// Start the server
